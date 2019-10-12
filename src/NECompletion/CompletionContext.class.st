@@ -39,7 +39,11 @@ CompletionContext >> completionToken [
 CompletionContext >> createModel [
 	self parseSource.
 	node := ast nodeForOffset: position.
-  ^ (CompletionModel new node: node) clazz: theClass
+  ^ CompletionModel new
+		node: node;
+		clazz: theClass;
+		context: self;
+		yourself.
 ]
 
 { #category : #accessing }

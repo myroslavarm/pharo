@@ -14,7 +14,7 @@ NgramSorter class >> kind [
 ]
 
 { #category : #description }
-NgramSorter class >> sortCompletionList: aList [
+NgramSorter class >> sortCompletionList: aList basedOn: aContext [
 
 	^ aList sorted.
 ]

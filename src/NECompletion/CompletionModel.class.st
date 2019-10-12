@@ -9,7 +9,8 @@ Class {
 		'node',
 		'completionToken',
 		'entries',
-		'sorter'
+		'sorter',
+		'context'
 	],
 	#classVars : [
 		'Sorter'
@@ -71,6 +72,16 @@ CompletionModel >> completionAt: aNumber [
 		ifFalse: [ entry ]. 
 	
 	
+]
+
+{ #category : #accessing }
+CompletionModel >> context [
+	^ context
+]
+
+{ #category : #accessing }
+CompletionModel >> context: anObject [
+	context := anObject
 ]
 
 { #category : #accessing }
@@ -146,7 +157,7 @@ CompletionModel >> notEmpty [
 { #category : #accessing }
 CompletionModel >> sortList: aList [
 	"this is where the sorting strategy is set"
-	^ sorter sortCompletionList: aList asOrderedCollection
+	^ sorter sortCompletionList: aList asOrderedCollection basedOn: self context
 ]
 
 { #category : #accessing }

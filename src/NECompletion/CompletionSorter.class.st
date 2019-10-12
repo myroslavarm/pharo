@@ -20,7 +20,7 @@ CompletionSorter class >> register [
 ]
 
 { #category : #description }
-CompletionSorter class >> sortCompletionList: aList [
+CompletionSorter class >> sortCompletionList: aList basedOn: aContext [
 
 	self shouldBeImplemented.
 ]

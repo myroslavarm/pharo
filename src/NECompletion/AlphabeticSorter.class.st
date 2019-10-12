@@ -14,7 +14,7 @@ AlphabeticSorter class >> kind [
 ]
 
 { #category : #description }
-AlphabeticSorter class >> sortCompletionList: aList [
+AlphabeticSorter class >> sortCompletionList: aList basedOn: aContext [
 
 	^ aList sorted.
 ]

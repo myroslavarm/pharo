@@ -14,7 +14,7 @@ ReverseAlphabeticSorter class >> kind [
 ]
 
 { #category : #description }
-ReverseAlphabeticSorter class >> sortCompletionList: aList [
+ReverseAlphabeticSorter class >> sortCompletionList: aList basedOn: aContext [
 
 	^ aList sorted reverse.
 ]
