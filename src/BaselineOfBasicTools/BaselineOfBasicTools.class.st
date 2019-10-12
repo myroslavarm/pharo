@@ -45,6 +45,12 @@ BaselineOfBasicTools >> baseline: spec [
 						loads: 'Core';
 						className: 'BaselineOfSUnit';
 						repository: repository ].
+			
+			"Used for code completion"	
+			spec 
+				baseline: 'PharoCodeTokenizer';
+				with: [ spec repository: 'github://olekscode/PharoCodeTokenizer/src' ].
+				
 			spec
 				baseline: 'UI' with: [ spec repository: repository ];
 				baseline: 'Athens'
@@ -62,6 +68,7 @@ BaselineOfBasicTools >> baseline: spec [
 			spec package: 'Tool-Profilers'.
 			spec package: 'Tool-SystemReporter'.
 			spec package: 'NECompletion'.
+			spec package: 'PharoCodeTokenizer'.
 			spec package: 'Announcements-Help'.
 			spec package: 'Metacello-FileTree'.
 			spec package: 'Metacello-Cypress'.
